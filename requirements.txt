@@ -2,7 +2,7 @@
 
 fastapi==0.110.0
 # Editable install with no version control (GDAL==3.6.2)
--e c:\users\admin\anaconda3\lib\site-packages\gdal-3.6.2-py3.11-win-amd64.egg-info
+#-e c:\users\admin\anaconda3\lib\site-packages\gdal-3.6.2-py3.11-win-amd64.egg-info
 matplotlib==3.8.0
 numpy==1.26.4
 pandas==2.1.4
