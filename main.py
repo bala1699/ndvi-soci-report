@@ -123,7 +123,6 @@ with open(output_json_nir, 'r') as f2:
 
 ndvi = data_nir
 
-#Below is the code to make sure the coordinates match. But blocked it because my laptop couldn't handle it.
 for key1 in data_nir:
     for key2 in data_red:
 
@@ -141,6 +140,7 @@ for key1 in data_nir:
             continue      
         
             
+#The above code is for calculating ndvi with crosschecking the coordinates. It also can be done without checking as given below which is faster.
                 
 '''
 for key in ndvi:
@@ -155,7 +155,7 @@ for key in ndvi:
                 
 ndvi_values = [ndvi[key]["ndvi"] for key in ndvi]
 
-#The above code is for calculating ndvi with crosschecking the coordinates. It also can be done without checking as given below which is faster.
+
 
 soci = data_blue
 
@@ -257,10 +257,6 @@ def map_soci(input_data):
     plt.clf()
     return img_data.getvalue()
 
-
-app.listen(process.env.PORT || 3000, function(){
-  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-});
 
 @app.get("/get_ndvi_values/")
 def get_ndvi_values():
