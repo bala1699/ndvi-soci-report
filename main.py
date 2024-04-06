@@ -258,7 +258,7 @@ def map_soci(input_data):
     return img_data.getvalue()
 
 
-
+app.listen(process.env.PORT || 5000)
 
 @app.get("/get_ndvi_values/")
 def get_ndvi_values():
