@@ -257,6 +257,10 @@ def map_soci(input_data):
     plt.clf()
     return img_data.getvalue()
 
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
+
 
 @app.get("/get_ndvi_values/")
 def get_ndvi_values():
